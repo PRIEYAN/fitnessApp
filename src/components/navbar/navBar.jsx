@@ -1,12 +1,18 @@
 import React, { useState } from "react";
-import { NavLink } from "react-router-dom";
+import { NavLink, useLocation } from "react-router-dom";
 import "./navBar.css";
 
 const NavBar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const location = useLocation();
 
-  const toggleMenu = () => {
-    setIsMenuOpen(!isMenuOpen);
+  const scrollToSection = (sectionId) => {
+    setIsMenuOpen(false);
+    if (location.pathname !== '/') {
+      window.location.href = `/#${sectionId}`;
+    } else {
+      document.getElementById(sectionId)?.scrollIntoView({ behavior: 'smooth' });
+    }
   };
 
   return (
@@ -17,7 +23,7 @@ const NavBar = () => {
         </NavLink>
       </div>
 
-      <div className="menu-icon" onClick={toggleMenu}>
+      <div className="menu-icon" onClick={() => setIsMenuOpen(!isMenuOpen)}>
         <div className={`hamburger ${isMenuOpen ? 'active' : ''}`}>
           <span></span>
           <span></span>
@@ -27,29 +33,29 @@ const NavBar = () => {
 
       <ul className={`navbar-links ${isMenuOpen ? 'active' : ''}`}>
         <li>
-          <NavLink to="/" end onClick={() => setIsMenuOpen(false)}>
+          <a href="#" onClick={(e) => { e.preventDefault(); scrollToSection('hero'); }}>
             Home
-          </NavLink>
+          </a>
         </li>
         <li>
-          <NavLink to="/category" onClick={() => setIsMenuOpen(false)}>
+          <a href="#equ" onClick={(e) => { e.preventDefault(); scrollToSection('equipment'); }}>
             Category
-          </NavLink>
+          </a>
         </li>
         <li>
-          <NavLink to="/membership" onClick={() => setIsMenuOpen(false)}>
+          <a href="#membership" onClick={(e) => { e.preventDefault(); scrollToSection('membership'); }}>
             Membership
-          </NavLink>
+          </a>
         </li>
         <li>
-          <NavLink to="/trainer" onClick={() => setIsMenuOpen(false)}>
+          <a href="#trainer" onClick={(e) => { e.preventDefault(); scrollToSection('team'); }}>
             Trainer
-          </NavLink>
+          </a>
         </li>
         <li>
-          <NavLink to="/aboutus" onClick={() => setIsMenuOpen(false)}>
+          <a href="#aboutus" onClick={(e) => { e.preventDefault(); scrollToSection('aboutus'); }}>
             About Us
-          </NavLink>
+          </a>
         </li>
       </ul>
     </nav>

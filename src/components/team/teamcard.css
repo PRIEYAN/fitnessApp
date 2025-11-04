@@ -1,0 +1,130 @@
+.team-section {
+    padding: 80px 5%;
+    background: #ffffff;
+}
+
+.team-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 24px;
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
+/* For 4 cards */
+.team-grid.four-cards {
+    grid-template-columns: repeat(2, 1fr);
+}
+
+.team-card {
+    background: #F5F5F5;
+    border-radius: 16px;
+    overflow: hidden;
+    transition: transform 0.3s ease;
+    height: 100%;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.team-card:hover {
+    transform: translateY(-5px);
+}
+
+.team-card-image {
+    width: 100%;
+    height: 300px;
+    overflow: hidden;
+}
+
+.team-card-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+}
+
+.team-card:hover .team-card-image img {
+    transform: scale(1.05);
+}
+
+.team-card-content {
+    padding: 24px;
+}
+
+.team-card h3 {
+    color: black;
+    font-size: 1.5rem;
+    margin-bottom: 16px;
+    font-weight: 600;
+}
+
+.team-card .quote {
+    color: black;
+    font-size: 1.1rem;
+    margin-bottom: 12px;
+    line-height: 1.5;
+    font-weight: 500;
+}
+
+.team-card .gray-text {
+    color: black;
+    font-size: 0.9rem;
+    margin-bottom: 24px;
+    line-height: 1.6;
+}
+
+.card-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: auto;
+}
+
+.specialist {
+    color: black;
+    font-size: 0.9rem;
+}
+
+.specialist span {
+    color: black;
+    font-weight: 500;
+}
+
+.view-details {
+    background: none;
+    border: none;
+    color: #ffd100;
+    font-weight: 600;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 0;
+    font-size: 0.9rem;
+    transition: transform 0.2s ease;
+    padding: 20px;
+
+}
+
+.view-details:hover {
+    transform: translateX(5px);
+    padding: 20px;
+    color: white;
+}
+
+/* Responsive */
+@media (max-width: 1024px) {
+    .team-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 768px) {
+    .team-grid,
+    .team-grid.four-cards {
+        grid-template-columns: 1fr;
+    }
+    
+    .team-section {
+        padding: 60px 20px;
+    }
+}

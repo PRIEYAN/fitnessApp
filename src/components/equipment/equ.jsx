@@ -5,7 +5,7 @@ import EquCard, { CatCard } from './equCard';
 
 const Equipment = () => {
     return (
-        <section className="equ-section">
+        <section id="equipment" className="equ-section">
             <div className="equ-header">
                 <h2>Our Most Advanced Gym Equipment</h2>
                 <p><i>"Train smarter, push harder, and achieve more with our most advanced gym equipment."</i></p>
