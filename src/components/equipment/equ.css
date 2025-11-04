@@ -60,6 +60,21 @@
     margin: 0 auto;
 }
 
+.category{
+    padding: 20px;
+    margin: 30px;
+    text-align: center;
+}
+.category h1{
+    color:black;
+    padding: 20px;
+    margin:20px;
+}
+
+.category p{
+    color: #666666;
+}
+
 /* Responsive */
 @media (max-width: 768px) {
     .equ-section {
@@ -75,3 +90,4 @@
         gap: 20px;
     }
 }
+

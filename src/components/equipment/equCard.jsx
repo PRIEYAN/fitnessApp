@@ -24,6 +24,24 @@ const EquCard = ({ image, name, description, rating, price }) => {
     );
 };
 
+export const CatCard = ({image,title})=>{
+    return(
+        <div className="equ-card"><br />
+            <div className="equ-card-image">
+                <img src={image} alt={title} />
+            </div>
+            <div className="title">
+                <h3>{title}</h3>
+            </div>
+        </div>
+    )
+}
+
+CatCard.propTypes = {
+    image: PropTypes.string.isRequired,
+    title : PropTypes.string.isRequired
+}
+
 EquCard.propTypes = {
     image: PropTypes.string.isRequired,
     name: PropTypes.string.isRequired,

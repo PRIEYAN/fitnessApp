@@ -1,7 +1,7 @@
 import React from 'react';
 import './equ.css';
 import equ1 from '../../assets/equ.png';
-import EquCard from './equCard';
+import EquCard, { CatCard } from './equCard';
 
 const Equipment = () => {
     return (
@@ -18,7 +18,23 @@ const Equipment = () => {
                 <EquCard image={equ1} name="Cable Machine" description="Dual pulley system for full body workouts" rating={4.8} price={2999} />
                 <EquCard image={equ1} name="Smart Bike" description="Interactive cycling with live resistance control" rating={4.7} price={1899} />
             </div>
+
+            <div className="category">
+                <h1>We have all Category in Our Gym</h1>
+                <div className="equ-grid">
+                    <CatCard image={equ1} title="Treadmill" />
+                    <CatCard image={equ1} title="Dumbbells" />
+                    <CatCard image={equ1} title="Rower" />
+                    <CatCard image={equ1} title="Bike" />
+                </div>
+                <h1>Boost your achivements</h1>
+                <p>Your body can stand almost anything. It’s your mind you have to convince.”</p>
+            </div>
+
         </section>
+
+
+        
     );
 }
 
