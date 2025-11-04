@@ -3,6 +3,7 @@ import './home.css';
 import Hero from '../../components/hero/hero';
 import Equipment from '../../components/equipment/equ';
 import Team from '../../components/team/team';
+import Membership from '../../components/membership/membership';
 
 const Home = () => {
     return (
@@ -10,6 +11,7 @@ const Home = () => {
             <Hero />
             <Equipment />
             <Team />
+            <Membership />
         </div>
     );
 }
