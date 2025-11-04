@@ -1,0 +1,116 @@
+.equCard{
+    width: 300px;
+    height: 400px;
+    background-color: #000000;
+    border-radius: 10px;
+    padding: 20px;
+    margin: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.1);
+}
+.equCard:hover{
+    transform: translateY(-10px);
+    box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2);
+}
+.equCard:hover img{
+    box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2);
+}
+.equCard img{
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 10px;
+}
+.equCard h3{
+    font-size: 20px;
+    font-weight: 600;
+    color: #fff;
+}
+.equ-card {
+    background: rgb(255, 255, 255);
+    border-radius: 12px;
+    overflow: hidden;
+    transition: transform 0.3s ease;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.equ-card:hover {
+    transform: translateY(-5px);
+}
+
+.equ-card-image {
+    width: 100%;
+    height: 200px;
+    overflow: hidden;
+}
+
+.equ-card-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+}
+
+.equ-card:hover .equ-card-image img {
+    transform: scale(1.05);
+}
+
+.equ-card-content {
+    padding: 20px;
+}
+
+.equ-card h3 {
+    color: #000000;
+    font-size: 1.25rem;
+    margin-bottom: 10px;
+    font-weight: 600;
+}
+
+.equ-card .description {
+    color: #2e2e2e;
+    font-size: 0.9rem;
+    margin-bottom: 15px;
+    line-height: 1.5;
+}
+
+.rating {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin-bottom: 15px;
+}
+
+.star-icon {
+    color: #ffd100;
+}
+
+.price-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.price {
+    font-size: 1.25rem;
+    font-weight: 600;
+    color: #ffd100;
+}
+
+.view-details {
+    background: #ffd100;
+    color: #000;
+    padding: 8px 16px;
+    border-radius: 6px;
+    font-weight: 600;
+    border: none;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.view-details:hover {
+    background: #ffdb4d;
+    transform: translateY(-2px);
+}
