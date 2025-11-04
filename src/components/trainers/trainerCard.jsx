@@ -1,10 +1,23 @@
-import React from 'react';
+import React, { useState } from 'react';
 import PropTypes from 'prop-types';
 import './trainerCard.css';
 
 const TrainerCard = ({ name, role, image }) => {
+    const [isActive, setIsActive] = useState(false);
+
+    const toggleInfo = () => {
+        setIsActive(!isActive);
+    };
+
     return (
-        <div className="trainer-card">
+        <div 
+            className={`trainer-card ${isActive ? 'active' : ''}`}
+            onClick={toggleInfo}
+            onTouchEnd={(e) => {
+                e.preventDefault();
+                toggleInfo();
+            }}
+        >
             <div className="trainer-image">
                 <img src={image} alt={name} />
                 <div className="trainer-overlay">

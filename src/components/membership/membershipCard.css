@@ -2,6 +2,7 @@
     background-color: transparent;
     perspective: 1000px;
     height: 400px;
+    cursor: pointer;
 }
 
 .flip-card-inner {
@@ -13,7 +14,15 @@
     transform-style: preserve-3d;
 }
 
-.flip-card:hover .flip-card-inner {
+/* Hover Effects for Desktop */
+@media (hover: hover) {
+    .flip-card:hover .flip-card-inner {
+        transform: rotateY(180deg);
+    }
+}
+
+/* Touch Device Styles */
+.flip-card.flipped .flip-card-inner {
     transform: rotateY(180deg);
 }
 

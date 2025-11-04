@@ -1,10 +1,24 @@
-import React from 'react';
-import './membershipCard.css';
+import React, { useState } from 'react';
+import PropTypes from 'prop-types';
 import { FaCheck } from 'react-icons/fa';
+import './membershipCard.css';
 
 const MembershipCard = ({ type, color, price, description, features }) => {
+    const [isFlipped, setIsFlipped] = useState(false);
+
+    const toggleFlip = () => {
+        setIsFlipped(!isFlipped);
+    };
+
     return (
-        <div className="flip-card">
+        <div 
+            className={`flip-card ${isFlipped ? 'flipped' : ''}`}
+            onClick={toggleFlip}
+            onTouchEnd={(e) => {
+                e.preventDefault();
+                toggleFlip();
+            }}
+        >
             <div className="flip-card-inner">
                 {/* Front of the card */}
                 <div className="flip-card-front" style={{ backgroundColor: color }}>
@@ -42,6 +56,14 @@ const MembershipCard = ({ type, color, price, description, features }) => {
             </div>
         </div>
     );
+};
+
+MembershipCard.propTypes = {
+    type: PropTypes.string.isRequired,
+    color: PropTypes.string.isRequired,
+    price: PropTypes.number.isRequired,
+    description: PropTypes.string.isRequired,
+    features: PropTypes.arrayOf(PropTypes.string).isRequired
 };
 
 export default MembershipCard;

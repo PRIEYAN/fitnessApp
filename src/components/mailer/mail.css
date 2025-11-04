@@ -1,0 +1,11 @@
+.mail-container{
+    text-align: center;
+    align-items: center;
+    padding: 20px;
+}
+.mail-container h1{
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+}
+.mail-container p{
+    color: grey;
+}

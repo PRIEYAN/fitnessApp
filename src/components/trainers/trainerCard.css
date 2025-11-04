@@ -1,7 +1,9 @@
 .trainer-card {
     position: relative;
+    border-radius: 12px;
     overflow: hidden;
-    aspect-ratio: 1/1;
+    aspect-ratio: 3/4;
+    cursor: pointer;
 }
 
 .trainer-image {
@@ -49,17 +51,33 @@
     color: #ffd100;
 }
 
-/* Hover Effects */
-.trainer-card:hover .trainer-image img {
+/* Hover Effects for Desktop */
+@media (hover: hover) {
+    .trainer-card:hover .trainer-image img {
+        transform: scale(1.05);
+        filter: blur(3px);
+    }
+
+    .trainer-card:hover .trainer-overlay {
+        opacity: 1;
+    }
+
+    .trainer-card:hover .trainer-info {
+        transform: translateY(0);
+    }
+}
+
+/* Touch Device Styles */
+.trainer-card.active .trainer-image img {
     transform: scale(1.05);
     filter: blur(3px);
 }
 
-.trainer-card:hover .trainer-overlay {
+.trainer-card.active .trainer-overlay {
     opacity: 1;
 }
 
-.trainer-card:hover .trainer-info {
+.trainer-card.active .trainer-info {
     transform: translateY(0);
 }
 
