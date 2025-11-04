@@ -1,0 +1,66 @@
+.comment-card {
+    background: #000000;
+    border-radius: 12px;
+    border: 1px solid white;
+    padding: 30px;
+    position: relative;
+    transition: transform 0.3s ease;
+}
+
+.comment-card:hover {
+    transform: translateY(-5px);
+}
+
+.quote-icon {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    font-size: 40px;
+    color: rgb(255, 255, 255);
+    font-family: Georgia, serif;
+}
+
+.rating {
+    display: flex;
+    gap: 4px;
+    margin-bottom: 16px;
+}
+
+.star-icon {
+    color: #FFD700;
+    font-size: 16px;
+}
+
+.comment-text {
+    color: #e5e5e5;
+    font-size: 0.9rem;
+    line-height: 1.6;
+    margin-bottom: 24px;
+    font-weight: 300;
+}
+
+.user-info {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.user-image {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.user-name {
+    color: #fff;
+    font-weight: 500;
+    font-size: 0.9rem;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .comment-card {
+        padding: 24px;
+    }
+}
